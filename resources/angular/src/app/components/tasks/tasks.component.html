@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tasks.component.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="todo">
+        <div class="todo-container">
+            <div class="todo-list-title">TO DO LIST</div>
+            <div class="todo-add-task">
+                <form (ngSubmit)="insertData()">
+                    <div class="form-group">
+                        <label for="name">Add new task:</label><br>
+                        <input type="text" name="task" class="input-box" [(ngModel)]="task.description">
+                        <button class="btn">ADD</button>
+                    </div>
+                
+                </form>
+            </div>
+            <div class="todo-task-list">
+                <div *ngFor="let task of tasks" class="todo-tasklist-task">
+                    {{ task.description }}
+                    <div class="buttons">
+                        <button class="btn" (click)="deleteData(task.id)">DONE</button>
+                        <button class="btn" routerLink="edit/{{ task.id }}">EDIT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
