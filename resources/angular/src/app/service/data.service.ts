@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Task } from '../task';
 import { environment } from '../../environments/environment';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -29,9 +28,6 @@ export class DataService {
   }
 
   updateData(id?: number, data?: Task) {
-    return this.httpClient.put(
-      this.apiUrl + '/updateTask/' + id,
-      data
-    );
+    return this.httpClient.put(this.apiUrl + '/updateTask/' + id, data);
   }
 }
