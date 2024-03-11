@@ -11,28 +11,26 @@ import { FormsModule } from '@angular/forms';
 import { TaskEditComponent } from './components/task-edit/task-edit.component';
 
 const appRoutes: Routes = [
-    {
-      path: '', component:TasksComponent
-    },
-    {
-      path: 'edit/:id', component:TaskEditComponent
-    }
+  {
+    path: '',
+    component: TasksComponent,
+  },
+  {
+    path: 'edit/:id',
+    component: TaskEditComponent,
+  },
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TasksComponent,
-    TaskEditComponent
-  ],
+  declarations: [AppComponent, TasksComponent, TaskEditComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

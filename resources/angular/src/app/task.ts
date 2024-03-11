@@ -1,3 +1,3 @@
 export class Task {
-    description:any;
+    description?: string;
 }

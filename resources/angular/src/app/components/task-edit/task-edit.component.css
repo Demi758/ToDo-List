@@ -1,5 +1,4 @@
-
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,10 +7,11 @@ body{
   padding: 0;
   background-color: #d8eaf0;
 }
-div, button{
+div,
+button {
   font-family: Montserrat;
 }
-.todo{
+.todo {
   background-color: white;
   display: flex;
   align-items: center;
@@ -21,26 +21,25 @@ div, button{
   border-radius: 8px;
   box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.4);
 }
-.form-group{
+.form-group {
   display: flex;
   margin-top: 12px;
 }
-button{
-  background-color: #B1D4E0;
+button {
+  background-color: #b1d4e0;
   border: none;
   padding: 6px 12px 6px 12px;
   margin: 0 5px 0 5px;
   margin-left: 9px;
   cursor: pointer;
 }
-button:hover{
+button:hover {
   background-color: white;
-  border: solid 3px #B1D4E0;
+  border: solid 3px #b1d4e0;
   padding: 3px 9px 3px 9px;
   transition: 0.15s background-color ease-in-out;
-  
 }
-.input-box{
+.input-box {
   margin: 8px;
   line-height: 20px;
   min-height: 28px;

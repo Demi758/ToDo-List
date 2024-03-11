@@ -21,8 +21,7 @@ class TaskController extends Controller
     public function updateTask(Request $request, $id)
     {
         $task = Task::find($id);
-        if(is_null($task))
-        {
+        if (is_null($task)) {
             return response()->json(['message' => 'Task not found'], 404);
         }
         $task->update($request->all());
@@ -32,8 +31,7 @@ class TaskController extends Controller
     public function deleteTask(Request $request, $id)
     {
         $task = Task::find($id);
-        if(is_null($task))
-        {
+        if (is_null($task)) {
             return response()->json(['message' => 'Task not found'], 404);
         }
         $task->delete();
@@ -43,10 +41,9 @@ class TaskController extends Controller
     public function getTaskById(Request $request, $id)
     {
         $task = Task::find($id);
-        if(is_null($task))
-        {
+        if (is_null($task)) {
             return response()->json(['message' => 'Task not found'], 404);
         }
-        return response()->json($task::find($id), 200);
+        return response()->json($task);
     }
 }

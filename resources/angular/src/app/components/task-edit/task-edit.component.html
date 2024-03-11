@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="task-edit.component.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <title>Document</title>
-    </head>
-    <body>
-        
-            <div class="todo">
-                <form (ngSubmit)="updateTask()">
-                    <label for="name">Task</label><br>
-                    <div class="form-group">
-                        <input type="text" name="task" class="name" [(ngModel)]="task.description">
-                        <button class="btn">UPDATE</button>
-                    </div>
-                    
-                </form>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="task-edit.component.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
 
-    </body>
+  <body>
+    <div class="todo">
+      <form (ngSubmit)="updateTask()">
+        <label for="name">Task</label><br />
+        <div class="form-group">
+          <input
+            type="text"
+            name="task"
+            class="name"
+            [(ngModel)]="task.description"
+          />
+          <button class="btn">UPDATE</button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

@@ -28,4 +28,3 @@ Route::post('addTask', [TaskController::class, 'addTask']);
 Route::put('updateTask/{id}', [TaskController::class, 'updateTask']);
 
 Route::delete('deleteTask/{id}', [TaskController::class, 'deleteTask']);
-
